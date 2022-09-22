@@ -7,7 +7,7 @@ class Graph {
 public:
     Graph() {};
     void setVertexCount(int count); // graph initialization
-    void addEdge(int v1, int v2);
+    void addEdge(unsigned v1, unsigned v2);
     void findShortestPaths();
     int countPathsShorterThan(int maxLength);
 

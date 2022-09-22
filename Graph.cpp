@@ -1,4 +1,5 @@
 #include "Graph.h"
+#include <stdexcept>
 
 void Graph::setVertexCount(int count)
 {
@@ -9,8 +10,11 @@ void Graph::setVertexCount(int count)
 	}
 }
 
-void Graph::addEdge(int v1, int v2)
+void Graph::addEdge(unsigned v1, unsigned v2)
 {
+	if (v1 >= vertexCount || v2 >= vertexCount) {
+		throw out_of_range("ERROR: Vertex number out of range");
+	}
 	matrix[v1][v2] = 1;
 	matrix[v2][v1] = 1;
 }
