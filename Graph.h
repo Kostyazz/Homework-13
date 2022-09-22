@@ -6,9 +6,10 @@ using namespace std;
 class Graph {
 public:
     Graph() {};
-    void setVertexCount(int count);
+    void setVertexCount(int count); // graph initialization
     void addEdge(int v1, int v2);
     void findShortestPaths();
+    int countPathsShorterThan(int maxLength);
 
 private:
     int vertexCount = 0;
